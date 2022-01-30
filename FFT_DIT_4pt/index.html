@@ -22,11 +22,13 @@
     <input class="center" type="text" id="input2" placeholder="sub-sequence 1"/><br>
     <input class="center" type="text" id="input3" placeholder="sub-sequence 2"/><br>
     <input class="center" type="text" id="input4" placeholder="sub-sequence 3"/><br>
-    <button class="btn pink accent-3 right bold" onclick="processData()">Calculate</button>
+    <button id="submit_button" class="btn pink accent-3 right bold" onclick="processData()">Calculate</button>
   </div>
   <div id="output_container">
     <h5 class="center bold">Output</h5>
-    <h5 class="bold">Stage 0</h5>
+    <h5 class="bold">Question</h5>
+    <h6 class="bold pink-text text-accent-3" id="stg_out"></h6>
+    <h5 class="bold">Stage 0 - bit-reversal</h5>
     <h6 class="bold pink-text text-accent-3" id="stg0_out"></h6>
     <h5 class="bold">Stage 1</h5>
     <h6 class="bold pink-text text-accent-3" id="stg1_out"></h6>
@@ -37,6 +39,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.js" integrity="sha512-UvIACSDvB2RfwkjYTjYkuJq901Y6L4nZNoOHZMRBvSdIiIm3BFrtOdgjr5EZSPYR5cU/P6XUW6TN/578FuTysw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./brain.js"></script>
+<script src="./ux.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

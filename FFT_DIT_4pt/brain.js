@@ -13,6 +13,8 @@ function processData()
     x3 = math.complex((getElement("input3").value).replace("j","i"));
     x4 = math.complex((getElement("input4").value).replace("j","i"));
 
+    getElement("stg_out").innerHTML = String(x1) + "<br>" + String(x2) + "<br>" + String(x3) + "<br>" + String(x4);
+
     i1 = x1;
     i2 = x3;
     i3 = x2;
