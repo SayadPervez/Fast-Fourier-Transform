@@ -29,10 +29,10 @@ function processData()
 
     getElement("stg2_out").innerHTML = (String(iii0) + "<br><br>" + String(iii1) + "<br><br>" + String(iii2) + "<br><br>" + String(iii3)).replaceAll("i","j");
 
-    f0 = iii0;
-    f1 = iii2;
-    f2 = iii1;
-    f3 = iii3;
+    f0 = (iii0).format(6);
+    f1 = (iii2).format(6);
+    f2 = (iii1).format(6);
+    f3 = (iii3).format(6);
 
     getElement("stgf_out").innerHTML = (String(f0) + "<br><br>" + String(f1) + "<br><br>" + String(f2) + "<br><br>" + String(f3)).replaceAll("i","j");
 }
