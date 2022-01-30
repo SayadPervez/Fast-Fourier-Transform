@@ -15,6 +15,13 @@ function processData()
 
     getElement("stg0_out").innerHTML = (String(i0) + "<br><br>" + String(i1) + "<br><br>" + String(i2) + "<br><br>" + String(i3)).replaceAll("i","j");
 
+    i0 = i0.conjugate();
+    i1 = i1.conjugate();
+    i2 = i2.conjugate();
+    i3 = i3.conjugate();
+
+    getElement("stgcc_out").innerHTML = (String(i0) + "<br><br>" + String(i1) + "<br><br>" + String(i2) + "<br><br>" + String(i3)).replaceAll("i","j");
+
     ii0 = math.add(i0,i2);
     ii1 = math.add(i1,i3);
     ii2 = math.multiply(math.add(i0,i2.neg()),w0);
@@ -35,4 +42,11 @@ function processData()
     f3 = (iii3).format(6);
 
     getElement("stgf_out").innerHTML = (String(f0) + "<br><br>" + String(f1) + "<br><br>" + String(f2) + "<br><br>" + String(f3)).replaceAll("i","j");
+
+    f0/=4;
+    f1/=4;
+    f2/=4;
+    f3/=4;
+
+    getElement("stgfd_out").innerHTML = (String(f0) + "<br><br>" + String(f1) + "<br><br>" + String(f2) + "<br><br>" + String(f3)).replaceAll("i","j");
 }

@@ -16,7 +16,7 @@
   <title>EPMA</title>
 </head>
 <body>
-  <h5 class="center bold">DIF FFT - 4pt</h5><br><br>
+  <h5 class="center bold">Inverse DIF FFT - 4pt</h5><br><br>
   <div id="container">
     <input class="center" type="text" id="input0" placeholder="sub-sequence 0"/><br>
     <input class="center" type="text" id="input1" placeholder="sub-sequence 1"/><br>
@@ -28,12 +28,16 @@
     <h5 class="center bold">Output</h5>
     <h5 class="bold">Question</h5>
     <h6 class="bold pink-text text-accent-3" id="stg0_out"></h6>
+    <h5 class="bold">Complex Conjugate</h5>
+    <h6 class="bold pink-text text-accent-3" id="stgcc_out"></h6>
     <h5 class="bold">Stage 1</h5>
     <h6 class="bold pink-text text-accent-3" id="stg1_out"></h6>
     <h5 class="bold">Stage 2</h5>
     <h6 class="bold pink-text text-accent-3" id="stg2_out"></h6>
     <h5 class="bold">Bit Reversed Output</h5>
     <h6 class="bold pink-text text-accent-3" id="stgf_out"></h6>
+    <h5 class="bold">Divide by N</h5>
+    <h6 class="bold pink-text text-accent-3" id="stgfd_out"></h6>
   </div>
   <div style="width:100%;height: 30vh;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.js" integrity="sha512-UvIACSDvB2RfwkjYTjYkuJq901Y6L4nZNoOHZMRBvSdIiIm3BFrtOdgjr5EZSPYR5cU/P6XUW6TN/578FuTysw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
