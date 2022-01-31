@@ -33,7 +33,7 @@ function processData()
     x = (getElement("inputx").value).split(",").map(Number);
     h = (getElement("inputh").value).split(",").map(Number);
     out = convolve(x,h.reverse())
-    getElement("qout").innerHTML = `<h6 class="black-text bold">X(n) :</h6>${x.join("<br><br>")}<br><br><h6 class="black-text bold">H(-n) :</h6>${x.join("<br><br>")}<br><br>`
+    getElement("qout").innerHTML = `<h6 class="black-text bold">X(n) :</h6>${x.join("<br><br>")}<br><br><h6 class="black-text bold">H(-n) :</h6>${h.join("<br><br>")}<br><br>`
     getElement("out").innerHTML = out.join("<br><br>");
     getElement("len").innerHTML = out.length;
 }

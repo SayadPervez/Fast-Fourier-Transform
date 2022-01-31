@@ -96,7 +96,7 @@ function processData()
     x = (getElement("inputx").value).split(",").map(Number);
     h = (getElement("inputh").value).split(",").map(Number);
     out = convolution(x,h,x.length,h.length);
-    getElement("qout").innerHTML = `<h6 class="black-text bold">X(n) :</h6>${x.join("<br>")}<br><h6 class="black-text bold">H(n) :</h6>${x.join("<br>")}<br>`
+    getElement("qout").innerHTML = `<h6 class="black-text bold">X(n) :</h6>${x.join("<br>")}<br><h6 class="black-text bold">H(n) :</h6>${h.join("<br>")}<br>`
     getElement("out").innerHTML = out.join("<br>");
     getElement("len").innerHTML = out.length;
 }
