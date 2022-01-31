@@ -33,7 +33,7 @@ function processData()
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `Fc = ${Fc}<br>`;
+        getElement("out_c").innerHTML = `Fc = ${Fc} rad/sec<br>`;
     }
     else
     {   //       Analog Frequency
@@ -48,6 +48,6 @@ function processData()
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `Fc = ${Fc}<br>`;
+        getElement("out_c").innerHTML = `Fc = ${Fc} rad/sec<br>`;
     }
 }
