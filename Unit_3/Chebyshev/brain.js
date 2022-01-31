@@ -35,8 +35,6 @@ function processData()
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
         getElement("out_c").innerHTML = `<img class="materialboxed" src="./bilinear_images/c.jpeg" /><br><br>Ωc = ${Fc} rad/sec<br><br>`;
 
-        //       Normalized TF
-        getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
     }
     else
     {   //       Analog Frequency
@@ -53,7 +51,25 @@ function processData()
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
         getElement("out_c").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/c.jpeg" /><br><br>Ωc = ${Fc} rad/sec<br><br>`;
 
-        //       Normalized TF
-        getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
     }
+
+    // rest of the stuff
+    var epsilon = (Math.pow(( (1 / Math.pow(Ap,2)) - 1 ),1/2)).toPrecision(3);
+    var mu = ((1/epsilon) + Math.pow((1+Math.pow(epsilon,-2)),1/2)).toPrecision(4);
+    var a = (omegaP * (Math.pow(mu,1/N)-Math.pow(mu,-1/N)) / 2).toPrecision(4);
+    var b = (omegaP * (Math.pow(mu,1/N)+Math.pow(mu,-1/N)) / 2).toPrecision(4);
+    var hao = 1 / (Math.pow(1+(epsilon*epsilon),1/2));
+    var numerator = Ap * hao;
+    getElement("out_t").innerHTML = `
+    <img class="materialboxed" src="./tf/euab.jpeg" /><br><br>
+    Є = ${epsilon}<br><br>
+    μ = ${mu}<br><br>
+    a = ${a}<br><br>
+    b = ${b}<br><br><br><br>
+
+    Ha(o) = ${hao.toPrecision(4)}<br><br>
+    Numerator = Ha(o) x Denominator_Constant<br><br>
+    Denominator : <br>
+    <img class="materialboxed" src="./tf/den.jpeg" /><br><br>
+    `;
 }
