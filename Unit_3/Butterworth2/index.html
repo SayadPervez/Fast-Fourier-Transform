@@ -13,14 +13,42 @@
   <link rel="stylesheet" href="./scrollbar.css">
   <link rel="stylesheet" href="./skin.css">
   <link rel="icon" type="image/x-icon" href="./favicon.png">
-  <title>Unit 3</title>
+  <title>Butterworth</title>
 </head>
 <body>
-  <h3 class="center bold">Unit 3</h3>
-    <div id="container">
-        <h5><a href="./Butterworth1/index.html" class="bold">Butterworth (w)</a></h5>
-        <h5><a href="./Butterworth2/index.html" class="bold">Butterworth (Ω)</a></h5>
-    </div>
+  <h5 class="center bold">Butterworth</h5><br><br>
+  <div id="container">
+    <p>
+      <label>
+        <input id="bilinear" name="group1" type="radio" checked />
+        <span class="bold black-text">Bilinear</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="impulseInvariant" name="group1" type="radio" />
+        <span class="bold black-text">Impulse Invariant</span>
+      </label>
+    </p>
+    <br>
+    <input class="center" type="text" id="input0" placeholder="Ap"/><br>
+    <input class="center" type="text" id="input1" placeholder="As"/><br>
+    <input class="center" type="text" id="input2" placeholder="Ωp"/><br>
+    <input class="center" type="text" id="input3" placeholder="Ωs"/><br>
+    <input class="center" type="text" id="input4" placeholder="T"/><br>
+    <button id="submit_button" class="btn pink accent-3 right bold" onclick="processData()">Calculate</button>
+  </div>
+  <div id="output_container">
+    <h5 class="center bold">Output</h5>
+    <h5 class="bold">Given :</h5>
+    <h6 class="bold pink-text text-accent-3" id="out_g"></h6>
+    <h5 class="bold">Order of the Filter</h5>
+    <h6 class="bold pink-text text-accent-3" id="out_o"></h6>
+    <h5 class="bold">Cut-off Frequency</h5>
+    <h6 class="bold pink-text text-accent-3" id="out_c"></h6>
+    <h5 class="bold">Normalized T.F.</h5>
+    <h6 class="bold pink-text text-accent-3" id="out_t"></h6>
+  </div>
   <div style="width:100%;height: 30vh;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.js" integrity="sha512-UvIACSDvB2RfwkjYTjYkuJq901Y6L4nZNoOHZMRBvSdIiIm3BFrtOdgjr5EZSPYR5cU/P6XUW6TN/578FuTysw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
