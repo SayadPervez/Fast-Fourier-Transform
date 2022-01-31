@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+#container{
+    padding:0.5rem 3rem;
+}
+
+#output_container{
+    padding:0.5rem 3rem;
+    margin-top: 6rem;
+}
+
+
+button{
+    margin:2rem;
+}
+
+.bold{
+    font-weight: 600 !important;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: #f50057 !important;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #f50057 !important;
+}
