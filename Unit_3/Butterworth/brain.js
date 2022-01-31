@@ -24,30 +24,36 @@ function processData()
     {   //       Analog Frequency
         omegaP = ((2/T)*Math.tan(Wp/2)).toPrecision(6);
         omegaS = ((2/T)*Math.tan(Ws/2)).toPrecision(6);
-        getElement("out_a").innerHTML = `Ωp = ${omegaP} rad/sec<br><br>Ωs = ${omegaS} rad/sec<br><br>`;
+        getElement("out_a").innerHTML = `<img class="materialboxed" src="./bilinear_images/o.jpeg" /><br><br>Ωp = ${omegaP} rad/sec<br><br>Ωs = ${omegaS} rad/sec<br><br>`;
 
         //       Order of the filter
         var N = ((1/2)* Math.log( ( (1 / Math.pow(As,2)) - 1 ) / ( (1 / Math.pow(Ap,2)) - 1 ) ) / Math.log(omegaS/omegaP)).toPrecision(5);
-        getElement("out_o").innerHTML = `N = ${N} ~= ${Math.ceil(N)}<br>`;
+        getElement("out_o").innerHTML = `<img class="materialboxed" src="./bilinear_images/n.jpeg" /><br><br>N = ${N} ~= ${Math.ceil(N)}<br><br>`;
         N = Math.ceil(N);
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `Fc = ${Fc} rad/sec<br>`;
+        getElement("out_c").innerHTML = `<img class="materialboxed" src="./bilinear_images/c.jpeg" /><br><br>Fc = ${Fc} rad/sec<br><br>`;
+
+        //       Normalized TF
+        getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
     }
     else
     {   //       Analog Frequency
         omegaP = (Wp/T).toPrecision(6);
         omegaS = (Ws/T).toPrecision(6);
-        getElement("out_a").innerHTML = `Ωp = ${omegaP} rad/sec<br><br>Ωs = ${omegaS} rad/sec<br><br>`;
+        getElement("out_a").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/o.jpeg" /><br><br>Ωp = ${omegaP} rad/sec<br><br>Ωs = ${omegaS} rad/sec<br><br>`;
 
         //       Order of the filter
         var N = ((1/2)* Math.log( ( (1 / Math.pow(As,2)) - 1 ) / ( (1 / Math.pow(Ap,2)) - 1 ) ) / Math.log(omegaS/omegaP)).toPrecision(5);
-        getElement("out_o").innerHTML = `N = ${N} ~= ${Math.ceil(N)}<br>`;
+        getElement("out_o").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/n.jpeg" /><br><br>N = ${N} ~= ${Math.ceil(N)}<br><br>`;
         N = Math.ceil(N);
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `Fc = ${Fc} rad/sec<br>`;
+        getElement("out_c").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/c.jpeg" /><br><br>Fc = ${Fc} rad/sec<br><br>`;
+
+        //       Normalized TF
+        getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
     }
 }

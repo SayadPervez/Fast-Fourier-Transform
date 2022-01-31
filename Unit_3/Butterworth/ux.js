@@ -48,3 +48,9 @@ getElement("input0").addEventListener("keyup", function(event) {
       getElement("output_container").scrollIntoView();
     }
   });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+  });
