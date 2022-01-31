@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+#container{
+    padding:0.5rem 3rem;
+    margin:2rem auto;
+    width: 80%;
+}
+
+.bold{
+    font-weight: 600 !important;
+}
+
+a{
+    color: #f50057;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  a:visited {
+    color: #4a148c ;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #c51162;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #00e676;
+    background-color: transparent;
+    text-decoration: underline;
+  }
