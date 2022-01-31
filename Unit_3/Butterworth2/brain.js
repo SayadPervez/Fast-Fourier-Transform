@@ -28,7 +28,7 @@ function processData()
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `<img class="materialboxed" src="./bilinear_images/c.jpeg" /><br><br>Fc = ${Fc} rad/sec<br><br>`;
+        getElement("out_c").innerHTML = `<img class="materialboxed" src="./bilinear_images/c.jpeg" /><br><br>Ωc = ${Fc} rad/sec<br><br>`;
 
         //       Normalized TF
         getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
@@ -41,7 +41,7 @@ function processData()
 
         //       Cut off Frequency
         var Fc = (omegaP / Math.pow( ( (1 / Math.pow(Ap,2)) - 1 ) , 1/(2*N))).toPrecision(5);
-        getElement("out_c").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/c.jpeg" /><br><br>Fc = ${Fc} rad/sec<br><br>`;
+        getElement("out_c").innerHTML = `<img class="materialboxed" src="./impulseinvariant_images/c.jpeg" /><br><br>Ωc = ${Fc} rad/sec<br><br>`;
 
         //       Normalized TF
         getElement("out_t").innerHTML = `<img class="materialboxed" src="./tf/${N}.jpeg" /><br><img class="materialboxed" src="./tf/x.jpeg" /><br><br>`;
