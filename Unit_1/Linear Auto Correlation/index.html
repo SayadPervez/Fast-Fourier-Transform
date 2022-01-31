@@ -13,18 +13,23 @@
   <link rel="stylesheet" href="./scrollbar.css">
   <link rel="stylesheet" href="./skin.css">
   <link rel="icon" type="image/x-icon" href="./favicon.png">
-  <title>Unit 1</title>
+  <title>Linear Auto Correlation</title>
 </head>
 <body>
-  <h3 class="center bold">Unit 1</h3>
-    <div id="container">
-        <h5><a href="./Linear Convolution/index.html" class="bold">Linear Convolution</a></h5>
-        <h5><a href="./Linear Convolution/index.html" class="bold">Overlap Add / Overlap Save</a></h5>
-        <h5><a href="./Circular Convolution/index.html" class="bold">Circular Convolution</a></h5>
-        <br>
-        <h5><a href="./Linear Auto Correlation/index.html" class="bold">Linear Auto Correlation</a></h5>
-        <h5><a href="./Linear Cross Correlation/index.html" class="bold">Linear Cross Correlation</a></h5>
-    </div>
+  <h5 class="center bold">Linear Auto Correlation</h5>
+  <h6 class="center bold pink-text text-accent-3">Comma seperated input</h6><br><br>
+  <div id="container">
+    <input class="center" type="text" id="inputx" placeholder="x(n)"/><br>
+    <button id="submit_button" class="btn pink accent-3 right bold" onclick="processData()">Calculate</button>
+  </div>
+  <div id="output_container">
+    <h5 class="center bold">Output</h5>
+    <h5 class="bold">Question</h5>
+    <h6 class="bold pink-text text-accent-3" id="qout"></h6>
+    <h5 class="bold">Solution</h5>
+    <h6 class="bold"> N = <span id="len"></span></h6>
+    <h6 class="bold pink-text text-accent-3" id="out"></h6>
+  </div>
   <div style="width:100%;height: 30vh;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.js" integrity="sha512-UvIACSDvB2RfwkjYTjYkuJq901Y6L4nZNoOHZMRBvSdIiIm3BFrtOdgjr5EZSPYR5cU/P6XUW6TN/578FuTysw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
